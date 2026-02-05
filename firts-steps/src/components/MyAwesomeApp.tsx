@@ -8,6 +8,9 @@ export default function MyAwesomeApp() {
         <h1>{name}</h1>
         <h3>{lastName}</h3>
         <p>{city.join(", ")}</p>
+        <p style={{backgroundColor: 'yellow' }}>
+          esto es un comentario amarillo
+        </p>
     </div>
   )
 }
