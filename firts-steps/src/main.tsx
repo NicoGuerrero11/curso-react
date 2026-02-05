@@ -8,6 +8,6 @@ import MyAwesomeApp from './components/MyAwesomeApp'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <FirstStepApp />
-    <MyAwesomeApp />
+    {/* <MyAwesomeApp /> */}
   </StrictMode>,
 )
