@@ -5,9 +5,9 @@ export default function MyAwesomeApp() {
 
   return (
     <div>
-        <h1>{name}</h1>
+        <h1 data-testid= "first-name-title">{name}</h1>
         <h3>{lastName}</h3>
-        <p>{city.join(", ")}</p>
+        <p className="mi-clase-favorita">{city.join(", ")}</p>
         <p style={{backgroundColor: 'yellow' }}>
           esto es un comentario amarillo
         </p>

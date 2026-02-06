@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > should match snapshot 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="first-name-title"
+    >
+      Nicolas
+    </h1>
+    <h3>
+      Guerrero
+    </h3>
+    <p
+      class="mi-clase-favorita"
+    >
+      Buenos Aires, Cordoba, Mendoza
+    </p>
+    <p
+      style="background-color: yellow;"
+    >
+      esto es un comentario amarillo
+    </p>
+  </div>
+</div>
+`;
