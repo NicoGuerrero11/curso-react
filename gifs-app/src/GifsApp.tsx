@@ -1,34 +1,16 @@
-import { useState } from 'react';
+import { useGifs } from './gifs/hooks/useGifs';
 import { mockGifs } from './mock-data/gifs.mock';
 import { CustomHeader } from './components/CustomHeader';
 import { PreviousSearches } from './components/PreviousSearches';
 import { SearchBar } from './components/SearchBar';
 import { GifsList } from './components/GifsList';
-import { getGifsByQuery } from './gifs/get-gifs-by-query.action';
-import type { Gif } from './interfaces/gif.interface';
+
 
 
 
 export const GifsApp = () => {
-
-    const [gifs, setGifs] = useState<Gif[]>([])
-    const [previousTerm, setPreviousTerm] = useState<string[]>([])
-
-    const handlerClicked = (term:string) => {
-        console.log(term)
-    }
-    const handlerSearch = async (query:string) => {
-        const term = query.trim().toLocaleLowerCase()
-        if (!term)return;
-        if(previousTerm.includes(term))return;
-        setPreviousTerm((prev) => {
-            const updated = [term, ...prev];
-            return updated.slice(0, 8);
-        });
-        const gifs = await getGifsByQuery(query)
-        setGifs(gifs)
-    };
-
+    const {gifs, previousTerm, handlerClicked, handlerSearch} = useGifs();
+    
     return (
         <>
             {/* header */}
